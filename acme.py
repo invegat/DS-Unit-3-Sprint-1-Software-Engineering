@@ -22,7 +22,7 @@ class Product:
 
 class BoxingGlove(Product):
     def __init__(self, name, price=10, weight=10, flammability=0.5):
-        super().__init__(self, weight=10)
+        super().__init__(self, name, price, weight, flammability)
     
     def explode(self):
         return "...it's a glove."
