@@ -18,6 +18,7 @@ def generate_products(n=30):
 def inventory_report(products):
     print("ACME CORPORATION OFFICIAL INVENTORY REPORT")
     up = []
+    n = len(products)
     totals = [0, 0, 0.]
     for p in products:
         if p.name not in up:
@@ -28,9 +29,9 @@ def inventory_report(products):
     print(f"Unique product names: {len(up)}")
     # print(f"mean of price is {totals[0]} mean of weight is {totals[1]} \
     #        mean of flammability is {totals[2]")
-    print(f"Average price: {totals[0]}")
-    print(f"Average weight: {totals[1]}")
-    print(f"Average flammability: {totals[2]}")
+    print(f"Average price: {totals[0]/n}")
+    print(f"Average weight: {totals[1]/n}")
+    print(f"Average flammability: {totals[2]/n}")
 
 
 if __name__ == '__main__':
